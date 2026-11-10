@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">
+<title>鄉村/城市分類結果</title>
+<style>
+body{background:#0f1115;color:#e8eaf0;font-family:system-ui,sans-serif;padding:40px;max-width:900px;margin:auto}
+h1{font-size:24px} h2{color:#58a6ff;font-size:17px;margin-top:32px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:12px}
+th,td{padding:9px 12px;border-bottom:1px solid #262b36;text-align:left}
+th{color:#9aa3b2;font-size:12.5px} .num{font-variant-numeric:tabular-nums}
+.cm{font-family:monospace;color:#9aa3b2;font-size:12px}
+.best{color:#3fb950;font-weight:700}
+</style></head><body>
+<h1>鄉村 / 城市 段落分類結果</h1>
+<p>語料：《邊城》《駱駝祥子》｜標註 284 段｜分層 80/20｜random_state=42</p>
+<h2>特徵比較</h2>
+<table><tr><th>特徵</th><th>準確率</th><th>Macro-F1</th><th>鄉村 F1</th><th>城市 F1</th><th>混淆矩陣</th></tr>
+    <tr>
+      <td>词频_top200</td>
+      <td class="num">0.9649</td>
+      <td class="num">0.9649</td>
+      <td class="num">0.9643</td>
+      <td class="num">0.9655</td>
+      <td class="cm">[27, 2]<br>[0, 28]</td>
+    </tr>
+    <tr>
+      <td>词级TFIDF_1_2</td>
+      <td class="num">1.0</td>
+      <td class="num">1.0</td>
+      <td class="num">1.0</td>
+      <td class="num">1.0</td>
+      <td class="cm">[29, 0]<br>[0, 28]</td>
+    </tr>
+    <tr>
+      <td>字符TFIDF_2_3</td>
+      <td class="num">1.0</td>
+      <td class="num">1.0</td>
+      <td class="num">1.0</td>
+      <td class="num">1.0</td>
+      <td class="cm">[29, 0]<br>[0, 28]</td>
+    </tr></table>
+<p style="color:#9aa3b2;font-size:13px;margin-top:20px">
+最佳特徵：<span class="best">词级TFIDF_1_2</span>（Macro-F1 = 1.0）
+</p></body></html>
